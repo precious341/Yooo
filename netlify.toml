@@ -1,0 +1,26 @@
+# Netlify Configuration for DocuMind AI (Frontend SPA)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Production HTTP Security & Caching Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Single-Page Application (SPA) routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

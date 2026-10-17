@@ -1,0 +1,6 @@
+{
+  "name": "DocuMind AI",
+  "description": "Multi-source hybrid retrieval agent (RAG + live crawl) for technical documentation research with semantic vector search, keyword retrieval, and citations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

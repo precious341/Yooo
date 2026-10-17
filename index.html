@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocuMind AI — Multi-Source Technical Documentation Research</title>
+    <meta name="description" content="Multi-source hybrid retrieval agent (RAG + live crawl) for technical documentation research with semantic vector search, keyword retrieval, and citations." />
+    <meta property="og:title" content="DocuMind AI — Multi-Source Technical Documentation Research" />
+    <meta property="og:description" content="Multi-source hybrid retrieval agent (RAG + live crawl) for technical documentation research with semantic vector search, keyword retrieval, and citations." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Ignore Vite HMR WebSocket closing / reconnection errors per environment constraints
+      window.addEventListener('unhandledrejection', function (event) {
+        if (
+          event.reason &&
+          (event.reason.message?.includes('WebSocket') ||
+           event.reason.message?.includes('ws:') ||
+           event.reason.stack?.includes('@vite/client'))
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
